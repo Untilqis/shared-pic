@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   #テーブルとのアソシエーション
+  has_many :albums
+  #has_many :comments
 
   #バリデーション
   with_options presence: true do

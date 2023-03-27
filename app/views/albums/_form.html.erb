@@ -1,6 +1,6 @@
-<%= form_with model: @prototype, local: true do |f|%>
+<%= form_with model: @album, local: true do |f|%>
   <div class="field">
-    <%= f.label :title, "プロトタイプの名称" %><br />
+    <%= f.label :title, "タイトル" %><br />
     <%= f.text_field :title, id:"prototype_title" %>
   </div>
 
@@ -15,7 +15,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.label :image, "画像" %><br />
     <%= f.file_field :image, id:"prototype_image" %>
   </div>
 

@@ -3,8 +3,8 @@
   <div class=“card__body”>
     <%= link_to album.title, album_path(album.id), class: :card__title %>
     <p class=“card__summary”>
-      <%= album.catch_copy %>
+      <%= album.description %>
     </p>
-      <%= link_to "by #{album.user.name}", user_path(album.user.id), class: :card__user %>
+      <%= link_to "by #{album.user.nickname}", user_path(album.user.id), class: :card__user %>
   </div>
 </div>

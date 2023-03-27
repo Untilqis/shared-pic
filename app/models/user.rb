@@ -6,7 +6,7 @@ class User < ApplicationRecord
   
   #テーブルとのアソシエーション
   has_many :albums
-  #has_many :comments
+  has_many :comments
 
   #バリデーション
   with_options presence: true do

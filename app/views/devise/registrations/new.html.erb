@@ -24,21 +24,6 @@
           <%= f.text_field :nickname, id:"user_name" %>
         </div>
 
-        <div class="field">
-          <%= f.label :profile, "プロフィール" %><br />
-          <%= f.text_area :profile, class: :form__text, id:"user_profile" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :occupation, "所属" %><br />
-          <%= f.text_area :occupation, class: :form__text, id:"user_occupation" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :position, "役職" %><br />
-          <%= f.text_area :position, class: :form__text, id:"user_position" %>
-        </div>
-
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>

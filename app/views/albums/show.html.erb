@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @album.title %>
       </p>
-      <%= link_to @album.user.name , user_path(@album.user.id), class: :prototype__user %>
+      <%= link_to @album.user.nickname , user_path(@album.user.id), class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @album.user_id %>
         <div class="prototype__manage">
@@ -17,15 +17,9 @@
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">キャッチコピー</p>
+          <p class="detail__title">説明</p>
           <p class="detail__message">
-            <%= @album.catch_copy %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">コンセプト</p>
-          <p class="detail__message">
-            <%= @album.concept %>
+            <%= @album.description %>
           </p>
         </div>
       </div>
@@ -46,7 +40,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content %>
-              <%= link_to comment.user.name , "/users/#{comment.user_id}", class: :comment_user %>
+              <%= link_to comment.user.nickname , "/users/#{comment.user_id}", class: :comment_user %>
             </li>
           <% end %>
         </ul>

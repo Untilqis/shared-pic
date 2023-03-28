@@ -17,7 +17,8 @@ div {
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  background-color: #26282a;
+  color: #e0dada;
 }
 
 li {
@@ -31,13 +32,13 @@ img {
 
 a {
   text-decoration: none;
-  color: #3b4043;
+  color: #e0dada;
 }
 
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #171616;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -58,23 +59,23 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #656a6e;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #656a6e solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #656a6e;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #656a6e;
   text-decoration: none;
   user-select: none;
 }
@@ -95,6 +96,10 @@ a {
   margin: 10px 0;
 }
 
+.previews{
+  margin: 20px 0;
+}
+
 .actions{
   margin-bottom: 40px;
 }
@@ -106,8 +111,8 @@ a {
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
+  background: #656a6e;
+  border: 1px #656a6e solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
@@ -215,7 +220,7 @@ a {
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: #26282a;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -247,7 +252,7 @@ a {
 .table__col1{
   text-align: left;
   font-weight: bold;
-  background: #fafafa;
+  background: #26282a;
   border-collapse: collapse;
   border: 1px solid #f5f5f5;
   width: 30%;
@@ -269,7 +274,7 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #171616;
   padding: 10px 0;
 }
 .copyright {

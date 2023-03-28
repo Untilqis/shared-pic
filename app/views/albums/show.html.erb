@@ -5,7 +5,7 @@
         <%= @album.title %>
       </p>
       <%= link_to @album.user.nickname , user_path(@album.user.id), class: :prototype__user %>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+      <%# 投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @album.user_id %>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_album_path(@album.id), class: :prototype__btn, method: :get %>

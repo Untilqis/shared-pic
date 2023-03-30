@@ -100,6 +100,11 @@ a {
   margin: 20px 0;
 }
 
+.preview-image{
+  height: 330px;
+  width: auto;
+}
+
 .actions{
   margin-bottom: 40px;
 }

@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const albumForm = document.getElementById('new_post');
   // プレビューを表示するためのスペースを取得
   const previewList = document.getElementById('previews');
-    previews.style.width = '390px';
-    previews.style.height = '260px';
   // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
   if (!albumForm) return null;
 

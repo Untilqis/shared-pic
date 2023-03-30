@@ -60,3 +60,7 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 
 gem 'mini_exiftool'
+
+group :production do
+  gem 'pg'
+end

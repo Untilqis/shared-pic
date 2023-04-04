@@ -27,6 +27,7 @@
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
           <%= form_with(model: [@album, @comment], local: true) do |f| %>
+            <%= render 'layouts/error_messages', model: f.object %>
             <div class="field">
               <%= f.label :content, "コメント" %><br />
               <%= f.text_field :content, id:"comment_content" %>

@@ -8,5 +8,8 @@ ja:
         title: タイトル
         description: 説明
         image: 画像
+        user: ユーザー情報
       comment:
         content: コメント
+        user: ユーザー情報
+        album: 写真

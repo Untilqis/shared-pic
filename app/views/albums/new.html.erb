@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="form__wrapper">
       <h2 class="page-heading">写真投稿</h2>
-        <%= render partial: "form", locals: {url: albums_path(@album.id), method: :album} %>
+        <%= render partial: "form", locals: {url: albums_path, method: :album} %>
     </div>
   </div>
 </div>

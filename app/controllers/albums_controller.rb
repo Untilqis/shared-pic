@@ -6,12 +6,13 @@ class AlbumsController < ApplicationController
   end
 
   def new
-    @album = Album.new
+    @album_form = AlbumForm.new
   end
 
   def create
-    @album = Album.new(album_params)
-    if @album.save
+    @album_form = AlbumForm.new(album_form_params)
+    if @album_form.valid?
+      @album_form.save
       redirect_to root_path
     else
       render :new
@@ -26,6 +27,8 @@ class AlbumsController < ApplicationController
 
   def edit
     @album = Album.find(params[:id])
+    album_attributes = @album.attributes
+    @album_form = AlbumForm.new(album_attributes)
     unless current_user.id == @album.user_id
       redirect_to action: :index
     end
@@ -33,7 +36,9 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    if @album.update(album_params)
+    @album_form = AlbumForm.new(album_form_params)
+    if @album_form.valid?
+      @album_form.update(album_form_params, @album)
       redirect_to album_path
     else
       render :edit
@@ -48,8 +53,8 @@ class AlbumsController < ApplicationController
 
   private
 
-  def album_params
-    params.require(:album).permit(:title, :description,:image).merge(user_id: current_user.id)
+  def album_form_params
+    params.require(:album_form).permit(:title, :description, :image).merge(user_id: current_user.id)
   end
 
 end

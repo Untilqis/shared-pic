@@ -21,6 +21,10 @@
           <p class="detail__message">
             <%= @album.description %>
           </p>
+          <p class="detail__title">タグ</p>
+          <p class="detail__tag">
+            <%= @album.tags.first&.tag_name %>
+          </p>
         </div>
       </div>
       <div class="prototype__comments">

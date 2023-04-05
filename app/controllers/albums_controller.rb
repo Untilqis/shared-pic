@@ -37,6 +37,7 @@ class AlbumsController < ApplicationController
   def update
     @album = Album.find(params[:id])
     @album_form = AlbumForm.new(album_form_params)
+    @album_form.tag_name = @album.tags.first&.tag_name
     # 画像を選択し直していない場合は、既存の画像をセットする
     @album_form.image ||= @album.image.blob
     if @album_form.valid?

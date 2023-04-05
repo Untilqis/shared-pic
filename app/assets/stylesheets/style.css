@@ -39,7 +39,7 @@ a {
 
 .header {
   background-color: #171616;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
   padding: 20px 0;
 
 }
@@ -130,9 +130,6 @@ a {
 
 /* メイン */
 
-.greeting{
-  margin-bottom: 20px;
-}
 .greeting__link{
   text-decoration: underline;
 }
@@ -152,7 +149,7 @@ a {
   margin-bottom: 40px;
 }
 .card__img {
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 .card__title {
   display: block;
@@ -168,6 +165,9 @@ a {
   font-size: 12px;
   color: #999;
   text-align: right;
+}
+
+.card__nickname {
   text-decoration: underline;
 }
 

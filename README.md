@@ -122,8 +122,10 @@ yarn install
 
 ### Association
 
-- has_many: comments
 - belongs_to: user
+- has_many: comments
+- has_many: album_tag_relations
+- has_many: tags, through: :album_tag_relations
 
 ## comments テーブル
 
@@ -136,3 +138,25 @@ yarn install
 ### Association
 - belongs_to: user
 - belongs_to: album
+
+## tags テーブル
+
+| Column   | Type   | Options          |
+| -------- | ------ | ---------------- |
+| tag_name | string | uniqueness: true |
+
+### Association
+
+- has_many :album_tag_relations
+- has_many :album, through: :album_tag_relations
+
+## album_tag_relations テーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| album     | references | null: false, foreign_key: true |
+| tag       | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :album
+- belongs_to :tag

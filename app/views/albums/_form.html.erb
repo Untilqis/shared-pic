@@ -11,14 +11,16 @@
   </div>
 
   <div class="field">
+    <div class="tags" id="tags"></div>
+    <%= f.label :tag_name,"タグ" %><br />
+    <%= f.text_field :tag_name, placeholder: 'add tags' %>
+  </div>
+
+  <div class="field">
     <div class="previews" id="previews"></div>
     <%= f.label :image, "画像" %><br />
     <%= f.file_field :image, id:"prototype_image" %>
   </div>
-
-  <div class="field">
-    <%= f.label :tag_name,"タグ" %><br />
-    <%= f.text_field :tag_name, placeholder: 'add tags' %>
 
   <div class="actions">
     <%= f.submit "投稿する", class: :form__btn  %>

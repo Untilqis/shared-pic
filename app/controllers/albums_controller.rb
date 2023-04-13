@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_album, only: [:show, :edit, :update, :destroy]
   
   def index
     @albums = Album.all
@@ -20,13 +21,11 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
     @comment = Comment.new
     @comments = @album.comments.includes(:user)
   end
 
   def edit
-    @album = Album.find(params[:id])
     album_attributes = @album.attributes
     @album_form = AlbumForm.new(album_attributes)
     unless current_user.id == @album.user_id
@@ -35,7 +34,6 @@ class AlbumsController < ApplicationController
   end
 
   def update
-    @album = Album.find(params[:id])
     @album_form = AlbumForm.new(album_form_params)
     @album_form.tag_name = @album.tags.first&.tag_name
     # 画像を選択し直していない場合は、既存の画像をセットする
@@ -49,12 +47,15 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    album = Album.find(params[:id])
     album.destroy
     redirect_to root_path
   end
 
   private
+
+  def set_album
+    @album = Album.find(params[:id])
+  end
 
   def album_form_params
     params.require(:album_form).permit(:title, :description, :tag_name, :image).merge(user_id: current_user.id)

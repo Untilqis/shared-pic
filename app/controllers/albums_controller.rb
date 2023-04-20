@@ -14,6 +14,7 @@ class AlbumsController < ApplicationController
     @album_form = AlbumForm.new(album_form_params)
     if @album_form.valid?
       @album_form.save
+      @album.exif_data
       redirect_to root_path
     else
       render :new
@@ -40,6 +41,7 @@ class AlbumsController < ApplicationController
     @album_form.image ||= @album.image.blob
     if @album_form.valid?
       @album_form.update(album_form_params, @album)
+      @album.exif_data
       redirect_to album_path
     else
       render :edit

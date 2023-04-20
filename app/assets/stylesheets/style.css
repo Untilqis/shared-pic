@@ -188,7 +188,7 @@ a {
   text-decoration: underline;
 }
 .prototype__image{
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   padding: 16px 0;
 }
@@ -331,3 +331,11 @@ a {
     width: 100%;
   }
 }
+
+/*
+<%= @album.exif_data[:date_time_original] %>
+<%= @album.exif_data[:aperture] %>
+<%= @album.exif_data[:shutter_speed] %>
+<%= @album.exif_data[:iso] %>
+<%= @album.exif_data[:model] %>
+*/

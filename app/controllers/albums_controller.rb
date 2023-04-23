@@ -47,7 +47,7 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    album.destroy
+    @album.destroy
     redirect_to root_path
   end
 

@@ -2,18 +2,18 @@
   <%= render 'layouts/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title, id:"prototype_title" %>
+    <%= f.text_field :title, id:"prototype_title", class:"input-box" %>
   </div>
 
   <div class="field">
     <%= f.label :description, "説明" %><br />
-    <%= f.text_area :description, class: :form__text, id:"prototype_catch_copy" %>
+    <%= f.text_area :description, class:"form__text", id:"prototype_catch_copy" %>
   </div>
 
   <div class="field">
     <div class="tags" id="tags"></div>
     <%= f.label :tag_name,"タグ" %><br />
-    <%= f.text_field :tag_name, placeholder: 'add tags' %>
+    <%= f.text_field :tag_name, class:"input-box", placeholder: 'add tags' %>
   </div>
 
   <div class="field">
@@ -23,6 +23,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "投稿する", class: :form__btn  %>
+    <%= f.submit "投稿する", class: :form__btn %>
   </div>
 <% end %>

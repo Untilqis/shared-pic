@@ -16,7 +16,7 @@ div {
 }
 
 body {
-  font-family: 'Arial';
+  font-family: "Arial", "Hiragino Kaku Gothic ProN W3", sans-serif;
   background-color: #26282a;
   color: #e0dada;
 }
@@ -63,7 +63,7 @@ a {
   text-decoration: none;
   user-select: none;
   border: 1px #656a6e solid;
-  border-radius: 3px;
+  border-radius: 7px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
@@ -90,10 +90,19 @@ a {
 
 .form__text {
   width: 50%;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
 .field{
   margin: 10px 0;
+}
+
+.input-box{
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
 .previews{
@@ -118,7 +127,7 @@ a {
   user-select: none;
   background: #656a6e;
   border: 1px #656a6e solid;
-  border-radius: 3px;
+  border-radius: 7px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
 }
@@ -331,11 +340,3 @@ a {
     width: 100%;
   }
 }
-
-/*
-<%= @album.exif_data[:date_time_original] %>
-<%= @album.exif_data[:aperture] %>
-<%= @album.exif_data[:shutter_speed] %>
-<%= @album.exif_data[:iso] %>
-<%= @album.exif_data[:model] %>
-*/

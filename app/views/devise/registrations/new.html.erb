@@ -8,22 +8,22 @@
 
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
-          <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, id:"user_email", class:"input-box", autofocus: true, autocomplete: "email" %>
         </div>
 
         <div class="field">
           <%= f.label :password, "パスワード（6文字以上）" %><br />
-          <%= f.password_field :password, id:"user_password", autocomplete: "new-password" %>
+          <%= f.password_field :password, id:"user_password", class:"input-box", autocomplete: "new-password" %>
         </div>
 
         <div class="field">
           <%= f.label :password_confirmation, "パスワード再入力" %><br />
-          <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
+          <%= f.password_field :password_confirmation, id:"user_password_confirmation", class:"input-box", autocomplete: "new-password" %>
         </div>
 
         <div class="field">
           <%= f.label :nickname, "ニックネーム" %><br />
-          <%= f.text_field :nickname, id:"user_name" %>
+          <%= f.text_field :nickname, id:"user_name", class:"input-box" %>
         </div>
 
         <div class="actions">

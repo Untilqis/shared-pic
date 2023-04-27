@@ -5,6 +5,6 @@ class Tag < ApplicationRecord
   has_many :albums, through: :album_tag_relations
   
   #バリデーション
-  validates :tag_name, uniqueness: true
+  validates :tag_name, presence: true, length: {maximum:99}
   
 end

@@ -185,6 +185,7 @@ a {
   min-height: calc(100vh - 161px);
 }
 .prototype__hedding{
+  margin: 0 0 10px 0;
   font-size: 24px;
   font-weight: bold;
   text-align: center;

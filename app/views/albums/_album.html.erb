@@ -7,7 +7,7 @@
       <%= album.title %>
     </div>
     <div class=“card__summary”>
-      <%= album.description %>
+      <%= render_with_tags(album.description) %>
     </div>
     <div class="card__user">
       投稿者 <%= link_to "#{album.user.nickname}", user_path(album.user.id), class: :card__nickname %>

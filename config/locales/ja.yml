@@ -13,3 +13,6 @@ ja:
         content: コメント
         user: ユーザー情報
         album: 写真
+  time:
+    formats:
+      custom: "%Y/%m/%d(%a) %H:%M"

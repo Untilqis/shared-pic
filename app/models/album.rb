@@ -36,4 +36,11 @@ class Album < ApplicationRecord
     end
   end
 
+  def exif_data
+    if image.attached? && image.blob.variable?
+      exif_data = Exiftool.new(image.blob.service.send(:path_for, image.blob.key)).to_hash
+      return exif_data
+    end
+  end
+
 end

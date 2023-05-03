@@ -208,7 +208,12 @@ a {
   flex-direction: column;
   margin-bottom: 8px;
 }
+.information__title{
+font-size: 20px;
+font-weight: bold;
+}
 .detail__title{
+  margin: 8px 0 0 0;
   font-size: 20px;
   font-weight: bold;
 }

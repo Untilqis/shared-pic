@@ -17,7 +17,7 @@ class Album < ApplicationRecord
   
   after_create do
     album = Album.find_by(id: self.id)
-    tags  = self.description.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    tags  = self.description.scan(/[#][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
     album.tags = []
     tags.uniq.map do |tag|
       #ハッシュタグは先頭の'#'を外した上で保存
@@ -29,7 +29,7 @@ class Album < ApplicationRecord
   before_update do 
     album = Album.find_by(id: self.id)
     album.tags.clear
-    tags = self.description.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    tags = self.description.scan(/[#][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
     tags.uniq.map do |tag|
       tag = Tag.find_or_create_by(tag_name: tag.downcase.delete('#'))
       album.tags << tag

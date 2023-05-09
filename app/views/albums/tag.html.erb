@@ -7,9 +7,9 @@
       </div>
     <% end %>
     <%# // ログインしているときは上記を表示する %>
+    #<%= @tag.tag_name %> 
     <div class="card__wrapper">
       <%# 投稿一覧を表示する %>
-      #<%= @tag.tag_name %> 
       <%= render partial: "album", collection: @albums %>
     </div>
   </div>

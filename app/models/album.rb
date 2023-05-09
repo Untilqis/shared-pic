@@ -9,7 +9,6 @@ class Album < ApplicationRecord
 
   #バリデーション
   with_options presence: true do
-    validates :title
     validates :description
     validates :image
     validates :user_id

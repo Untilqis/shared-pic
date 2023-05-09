@@ -1,9 +1,6 @@
 <%= form_with model: @album, id: 'new_post', local: true do |f|%>
+  
   <%= render 'layouts/error_messages', model: f.object %>
-  <div class="field">
-    <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title, id:"prototype_title", class:"input-box" %>
-  </div>
 
   <div class="field">
     <%= f.label :description, "説明" %><br />
@@ -19,4 +16,5 @@
   <div class="actions">
     <%= f.submit "投稿する", class: :form__btn %>
   </div>
+
 <% end %>

@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2023_04_05_102216) do
   end
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title", null: false
     t.text "description", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -2,15 +2,4 @@
   <div class="card__img">
     <%= link_to image_tag(album.image), album_path(album.id) %>
   </div>
-  <div class=“card__body”>
-    <div class="card__title">
-      <%= album.title %>
-    </div>
-    <div class=“card__summary”>
-      <%= render_with_tags(album.description) %>
-    </div>
-    <div class="card__user">
-      投稿者 <%= link_to "#{album.user.nickname}", user_path(album.user.id), class: :card__nickname %>
-    </div>
-  </div>
 </div>

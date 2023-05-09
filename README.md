@@ -22,7 +22,7 @@ https://shared-pic.onrender.com/
 ## 写真投稿
 
 1. トップページ(一覧ページ)のヘッダーの新規登録ボタンからユーザーの新規登録を行う
-2. 写真投稿ボタンから内容(タイトル、説明、画像)を入力し投稿する
+2. 写真投稿ボタンから内容(説明、画像)を入力し投稿する
 
 ## コメント機能
 
@@ -117,7 +117,6 @@ yarn install
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| title       | string     | null: false                    |
 | description | text       | null: false                    |
 | user        | references | null: false, foreign_key: true |
 

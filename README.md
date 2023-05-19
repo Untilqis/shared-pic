@@ -65,6 +65,7 @@ https://docs.google.com/spreadsheets/d/1xbRBZ_CcJjX00gieJqCV25Ni6uvoPJ_HNabwLiw3
 # 実装予定の機能
 
 ログインする際に他のSNS認証の機能を実装したい。
+ユーザーのアイコン機能。
 
 # データベース設計
 

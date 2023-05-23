@@ -60,7 +60,7 @@ a {
 }
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1.2em;
   font-size: 0.8em;
   color: #656a6e;
   text-decoration: none;
@@ -76,13 +76,25 @@ a {
 
 .nav__logout{
   display: inline-block;
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1em;
   font-size: 0.8em;
   color: #656a6e;
   text-decoration: none;
   user-select: none;
 }
 .nav__logout:hover{
+  opacity: 0.5;
+}
+
+.nav__edit__user{
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 0.8em;
+  color: #656a6e;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__edit__user:hover{
   opacity: 0.5;
 }
 

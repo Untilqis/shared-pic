@@ -1,7 +1,9 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-      <%= link_to @album.user.nickname , user_path(@album.user.id), class: :prototype__user %>
+      <div class="prototype__user">
+        投稿者: <%= link_to @album.user.nickname, user_path(@album.user.id) %>
+      </div>
       <%# 投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @album.user_id %>
         <div class="prototype__manage">

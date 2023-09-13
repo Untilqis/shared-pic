@@ -16,14 +16,6 @@
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <% =begin %>
-          <p class="information__title">情報</p>
-          <li><strong>撮影日:</strong> <%= l(DateTime.strptime(@album.exif_data[:date_time_original], '%Y:%m:%d %H:%M:%S'), format: :custom) %></li>
-          <li><strong>カメラ情報:</strong> <%= @album.exif_data[:model] %></li>
-          <li><strong>絞り値:</strong> <%= @album.exif_data[:aperture] %></li>
-          <li><strong>シャッタースピード:</strong> <%= @album.exif_data[:shutter_speed] %></li>
-          <li><strong>ISO感度:</strong> <%= @album.exif_data[:iso] %></li>
-          <% =end %>
           <p class="detail__title">説明</p>
           <p class="detail__message">
             <%= render_with_tags(safe_join(@album.description.split("\n"),tag(:br))) %>

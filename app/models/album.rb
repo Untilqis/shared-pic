@@ -42,4 +42,12 @@ class Album < ApplicationRecord
     #end
   #end
 
+  #ローカル環境のみ動作するexiftool
+  #<p class="information__title">情報</p>
+  #<li><strong>撮影日:</strong> <%= l(DateTime.strptime(@album.exif_data[:date_time_original], '%Y:%m:%d %H:%M:%S'), format: :custom) %></li>
+  #<li><strong>カメラ情報:</strong> <%= @album.exif_data[:model] %></li>
+  #<li><strong>絞り値:</strong> <%= @album.exif_data[:aperture] %></li>
+  #<li><strong>シャッタースピード:</strong> <%= @album.exif_data[:shutter_speed] %></li>
+  #<li><strong>ISO感度:</strong> <%= @album.exif_data[:iso] %></li>
+  
 end

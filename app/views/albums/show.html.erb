@@ -17,6 +17,8 @@
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="information__title">情報</p>
+          <!-- デバッグ用の出力 -->
+          <%= debug @album.exif_data %>
           <li><strong>撮影日:</strong> <%= l(DateTime.strptime(@album.exif_data[:date_time_original], '%Y:%m:%d %H:%M:%S'), format: :custom) %></li>
           <li><strong>カメラ情報:</strong> <%= @album.exif_data[:model] %></li>
           <li><strong>絞り値:</strong> <%= @album.exif_data[:aperture] %></li>
